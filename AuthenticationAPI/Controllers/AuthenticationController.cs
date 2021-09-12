@@ -11,5 +11,9 @@ namespace AuthenticationAPI.Controllers
     [ApiController]
     public class AuthenticationController : ControllerBase
     {
+        public AuthenticationController()
+        {
+
+        }
     }
 }
