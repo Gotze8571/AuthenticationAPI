@@ -1,18 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bQcVceHpAlIwN+O0eHoGrKTGPg4ejjnfouR9AluAEkdr4dWmQavglpOT8jTRk5bDmiZx6eSjjADtKIA5j5uXiQ==",
-  "success": false,
+  "dgSpecHash": "JuNY/GT0j2XWUIF/NORCHSPggwp2aQehU3iNdZf+UOQxQW8ijNHRI74MD/sUNu6ZJMWONEYVx1VBtRQIHsibMg==",
+  "success": true,
   "projectFilePath": "C:\\Users\\DELL\\source\\repos\\AuthenticationAPI\\AuthenticationAPI\\AuthenticationAPI.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "Project Generic.Core is not compatible with netcoreapp3.1 (.NETCoreApp,Version=v3.1). Project Generic.Core supports: net5.0 (.NETCoreApp,Version=v5.0)",
-      "libraryId": "Generic.Core",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    }
-  ]
+  "logs": []
 }
