@@ -1,0 +1,16 @@
+﻿using Generic.Core.Entity;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Generic.Core.Models
+{
+    public class UserValidationRequest
+    {
+        [Required]
+        public IEnumerable<CustomerInfo> users { get; set; }
+    }
+}

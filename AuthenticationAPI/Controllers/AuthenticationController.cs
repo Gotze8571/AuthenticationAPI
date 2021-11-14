@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using AuthenticationAPI.Extensions;
+using Generic.Core.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -15,5 +17,14 @@ namespace AuthenticationAPI.Controllers
         {
 
         }
+
+        public async Task<ActionResult> SignUpUsers([FromBody] UserValidationRequest req)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState.GetErrorMessages());
+            }
+            return null;
+        } 
     }
 }
