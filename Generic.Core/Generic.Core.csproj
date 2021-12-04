@@ -5,10 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DAL\" />
-    <Folder Include="DTOs\" />
-    <Folder Include="Extensions\" />
-    <Folder Include="Filters\" />
+    <Compile Remove="DAL\**" />
+    <Compile Remove="DTOs\**" />
+    <Compile Remove="Extensions\**" />
+    <EmbeddedResource Remove="DAL\**" />
+    <EmbeddedResource Remove="DTOs\**" />
+    <EmbeddedResource Remove="Extensions\**" />
+    <None Remove="DAL\**" />
+    <None Remove="DTOs\**" />
+    <None Remove="Extensions\**" />
   </ItemGroup>
 
 </Project>

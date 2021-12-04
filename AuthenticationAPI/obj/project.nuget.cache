@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JuNY/GT0j2XWUIF/NORCHSPggwp2aQehU3iNdZf+UOQxQW8ijNHRI74MD/sUNu6ZJMWONEYVx1VBtRQIHsibMg==",
+  "dgSpecHash": "kMsIkVhyazxLuSL+N4VfdJoFlag1hlR0y5BNEQqDMzMS2cSRxho7ZYCRQf9UhGu3rGW/7wL0JROtwv058P413w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DELL\\source\\repos\\AuthenticationAPI\\AuthenticationAPI\\AuthenticationAPI.csproj",
+  "projectFilePath": "C:\\Users\\DELL\\source\\repos\\Authentication\\Authentication_Service\\AuthenticationAPI\\AuthenticationAPI\\AuthenticationAPI.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

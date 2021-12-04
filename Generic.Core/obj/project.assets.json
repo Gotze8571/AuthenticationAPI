@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DELL\\source\\repos\\AuthenticationAPI\\Generic.Core\\Generic.Core.csproj",
+      "projectUniqueName": "C:\\Users\\DELL\\source\\repos\\Authentication\\Authentication_Service\\AuthenticationAPI\\Generic.Core\\Generic.Core.csproj",
       "projectName": "Generic.Core",
-      "projectPath": "C:\\Users\\DELL\\source\\repos\\AuthenticationAPI\\Generic.Core\\Generic.Core.csproj",
+      "projectPath": "C:\\Users\\DELL\\source\\repos\\Authentication\\Authentication_Service\\AuthenticationAPI\\Generic.Core\\Generic.Core.csproj",
       "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DELL\\source\\repos\\AuthenticationAPI\\Generic.Core\\obj\\",
+      "outputPath": "C:\\Users\\DELL\\source\\repos\\Authentication\\Authentication_Service\\AuthenticationAPI\\Generic.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
