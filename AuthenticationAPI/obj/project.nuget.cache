@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "kMsIkVhyazxLuSL+N4VfdJoFlag1hlR0y5BNEQqDMzMS2cSRxho7ZYCRQf9UhGu3rGW/7wL0JROtwv058P413w==",
+  "dgSpecHash": "UKxXLa72Ymq8vDU0D2a9jVfJiZAaHbJIoOUmqlaZDIk0V0SvfMBmNU7Gy6ey3JjsGUsWwJeoAm5mwwcs1dBlCg==",
   "success": true,
   "projectFilePath": "C:\\Users\\DELL\\source\\repos\\Authentication\\Authentication_Service\\AuthenticationAPI\\AuthenticationAPI\\AuthenticationAPI.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512"
+  ],
   "logs": []
 }

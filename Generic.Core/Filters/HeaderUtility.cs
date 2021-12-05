@@ -8,5 +8,6 @@ namespace Generic.Core.Filters
 {
     public class HeaderUtility
     {
+
     }
 }
