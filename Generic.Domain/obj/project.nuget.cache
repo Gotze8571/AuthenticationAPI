@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "H+s3VUXcyXe007z30EQ88m2syIJovh8HTByBCreuyy65Tr7xpQ1DQ8oWj2iDBoNGgnLXmqStslsNKdW4QFZtjw==",
+  "dgSpecHash": "0OHEbqdAQKGJwxQr7PypXbP3NS4zVmTJV7sxlJ5xELvZ38aFGKNORxOLDKX9A6pTqAGltqV0M2CnaP4MqRpYAA==",
   "success": true,
   "projectFilePath": "C:\\Users\\DELL\\source\\repos\\Authentication\\Authentication_Service\\AuthenticationAPI\\Generic.Domain\\Generic.Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\DELL\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\microorm.dapper.repositories\\1.19.1\\microorm.dapper.repositories.1.19.1.nupkg.sha512"
+  ],
   "logs": []
 }

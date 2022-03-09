@@ -45,7 +45,6 @@ C:\Users\DELL\source\repos\Authentication\Authentication_Service\AuthenticationA
 C:\Users\DELL\source\repos\Authentication\Authentication_Service\AuthenticationAPI\AuthenticationAPI\obj\Debug\net5.0\AuthenticationAPI.AssemblyInfoInputs.cache
 C:\Users\DELL\source\repos\Authentication\Authentication_Service\AuthenticationAPI\AuthenticationAPI\obj\Debug\net5.0\AuthenticationAPI.AssemblyInfo.cs
 C:\Users\DELL\source\repos\Authentication\Authentication_Service\AuthenticationAPI\AuthenticationAPI\obj\Debug\net5.0\AuthenticationAPI.csproj.CoreCompileInputs.cache
-C:\Users\DELL\source\repos\Authentication\Authentication_Service\AuthenticationAPI\AuthenticationAPI\obj\Debug\net5.0\AuthenticationAPI.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\DELL\source\repos\Authentication\Authentication_Service\AuthenticationAPI\AuthenticationAPI\obj\Debug\net5.0\AuthenticationAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\DELL\source\repos\Authentication\Authentication_Service\AuthenticationAPI\AuthenticationAPI\obj\Debug\net5.0\staticwebassets\AuthenticationAPI.StaticWebAssets.Manifest.cache
 C:\Users\DELL\source\repos\Authentication\Authentication_Service\AuthenticationAPI\AuthenticationAPI\obj\Debug\net5.0\staticwebassets\AuthenticationAPI.StaticWebAssets.xml
@@ -56,3 +55,7 @@ C:\Users\DELL\source\repos\Authentication\Authentication_Service\AuthenticationA
 C:\Users\DELL\source\repos\Authentication\Authentication_Service\AuthenticationAPI\AuthenticationAPI\obj\Debug\net5.0\ref\AuthenticationAPI.dll
 C:\Users\DELL\source\repos\Authentication\Authentication_Service\AuthenticationAPI\AuthenticationAPI\obj\Debug\net5.0\AuthenticationAPI.pdb
 C:\Users\DELL\source\repos\Authentication\Authentication_Service\AuthenticationAPI\AuthenticationAPI\obj\Debug\net5.0\AuthenticationAPI.genruntimeconfig.cache
+C:\Users\DELL\source\repos\Authentication\Authentication_Service\AuthenticationAPI\AuthenticationAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\DELL\source\repos\Authentication\Authentication_Service\AuthenticationAPI\AuthenticationAPI\bin\Debug\net5.0\Dapper.dll
+C:\Users\DELL\source\repos\Authentication\Authentication_Service\AuthenticationAPI\AuthenticationAPI\bin\Debug\net5.0\MicroOrm.Dapper.Repositories.dll
+C:\Users\DELL\source\repos\Authentication\Authentication_Service\AuthenticationAPI\AuthenticationAPI\obj\Debug\net5.0\AuthenticationAPI.MvcApplicationPartsAssemblyInfo.cs

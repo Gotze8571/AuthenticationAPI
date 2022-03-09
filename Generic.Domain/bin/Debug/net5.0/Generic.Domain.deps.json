@@ -8,10 +8,31 @@
     ".NETCoreApp,Version=v5.0": {
       "Generic.Domain/1.0.0": {
         "dependencies": {
-          "Generic.Core": "1.0.0"
+          "Dapper": "2.0.123",
+          "Generic.Core": "1.0.0",
+          "MicroOrm.Dapper.Repositories": "1.19.1"
         },
         "runtime": {
           "Generic.Domain.dll": {}
+        }
+      },
+      "Dapper/2.0.123": {
+        "runtime": {
+          "lib/net5.0/Dapper.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.123.33578"
+          }
+        }
+      },
+      "MicroOrm.Dapper.Repositories/1.19.1": {
+        "dependencies": {
+          "Dapper": "2.0.123"
+        },
+        "runtime": {
+          "lib/net5.0/MicroOrm.Dapper.Repositories.dll": {
+            "assemblyVersion": "1.19.1.0",
+            "fileVersion": "1.19.1.0"
+          }
         }
       },
       "Generic.Core/1.0.0": {
@@ -26,6 +47,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Dapper/2.0.123": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RDFF4rBLLmbpi6pwkY7q/M6UXHRJEOerplDGE5jwEkP/JGJnBauAClYavNKJPW1yOTWRPIyfj4is3EaJxQXILQ==",
+      "path": "dapper/2.0.123",
+      "hashPath": "dapper.2.0.123.nupkg.sha512"
+    },
+    "MicroOrm.Dapper.Repositories/1.19.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CaogKlaIQB/vA6Mt3A9hwRUjge34bxKs+hARyYGms7/R1m6DNUfOzf/gIoFeFcZ+FlRKY5uoxeKOxh+svmXbTA==",
+      "path": "microorm.dapper.repositories/1.19.1",
+      "hashPath": "microorm.dapper.repositories.1.19.1.nupkg.sha512"
     },
     "Generic.Core/1.0.0": {
       "type": "project",
