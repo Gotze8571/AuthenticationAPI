@@ -18,7 +18,7 @@ namespace AuthenticationAPI.Extensions
         {
             // Read and log request body data
             string requestBodyPayload = await ReadRequestBody(context.Request);
-            LogHelper.
+            
         }
 
         private async Task<string> ReadRequestBody(HttpRequest request)

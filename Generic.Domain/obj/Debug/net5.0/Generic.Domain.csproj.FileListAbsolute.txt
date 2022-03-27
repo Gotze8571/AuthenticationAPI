@@ -5,7 +5,6 @@ C:\Users\DELL\source\repos\Authentication\Authentication_Service\AuthenticationA
 C:\Users\DELL\source\repos\Authentication\Authentication_Service\AuthenticationAPI\Generic.Domain\obj\Debug\net5.0\Generic.Domain.csproj.CoreCompileInputs.cache
 C:\Users\DELL\source\repos\Authentication\Authentication_Service\AuthenticationAPI\Generic.Domain\bin\Debug\net5.0\Generic.Domain.deps.json
 C:\Users\DELL\source\repos\Authentication\Authentication_Service\AuthenticationAPI\Generic.Domain\bin\Debug\net5.0\Generic.Domain.dll
-C:\Users\DELL\source\repos\Authentication\Authentication_Service\AuthenticationAPI\Generic.Domain\bin\Debug\net5.0\ref\Generic.Domain.dll
 C:\Users\DELL\source\repos\Authentication\Authentication_Service\AuthenticationAPI\Generic.Domain\bin\Debug\net5.0\Generic.Domain.pdb
 C:\Users\DELL\source\repos\Authentication\Authentication_Service\AuthenticationAPI\Generic.Domain\bin\Debug\net5.0\Generic.Core.dll
 C:\Users\DELL\source\repos\Authentication\Authentication_Service\AuthenticationAPI\Generic.Domain\bin\Debug\net5.0\Generic.Core.pdb
@@ -13,3 +12,4 @@ C:\Users\DELL\source\repos\Authentication\Authentication_Service\AuthenticationA
 C:\Users\DELL\source\repos\Authentication\Authentication_Service\AuthenticationAPI\Generic.Domain\obj\Debug\net5.0\Generic.Domain.dll
 C:\Users\DELL\source\repos\Authentication\Authentication_Service\AuthenticationAPI\Generic.Domain\obj\Debug\net5.0\ref\Generic.Domain.dll
 C:\Users\DELL\source\repos\Authentication\Authentication_Service\AuthenticationAPI\Generic.Domain\obj\Debug\net5.0\Generic.Domain.pdb
+C:\Users\DELL\source\repos\Authentication\Authentication_Service\AuthenticationAPI\Generic.Domain\obj\Debug\net5.0\refint\Generic.Domain.dll

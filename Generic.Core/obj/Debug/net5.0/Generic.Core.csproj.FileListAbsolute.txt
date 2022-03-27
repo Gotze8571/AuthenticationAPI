@@ -12,7 +12,6 @@ C:\Users\DELL\source\repos\AuthenticationAPI\Generic.Core\obj\Debug\net5.0\ref\G
 C:\Users\DELL\source\repos\AuthenticationAPI\Generic.Core\obj\Debug\net5.0\Generic.Core.pdb
 C:\Users\DELL\source\repos\Authentication\Authentication_Service\AuthenticationAPI\Generic.Core\bin\Debug\net5.0\Generic.Core.deps.json
 C:\Users\DELL\source\repos\Authentication\Authentication_Service\AuthenticationAPI\Generic.Core\bin\Debug\net5.0\Generic.Core.dll
-C:\Users\DELL\source\repos\Authentication\Authentication_Service\AuthenticationAPI\Generic.Core\bin\Debug\net5.0\ref\Generic.Core.dll
 C:\Users\DELL\source\repos\Authentication\Authentication_Service\AuthenticationAPI\Generic.Core\bin\Debug\net5.0\Generic.Core.pdb
 C:\Users\DELL\source\repos\Authentication\Authentication_Service\AuthenticationAPI\Generic.Core\obj\Debug\net5.0\Generic.Core.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\DELL\source\repos\Authentication\Authentication_Service\AuthenticationAPI\Generic.Core\obj\Debug\net5.0\Generic.Core.AssemblyInfoInputs.cache
@@ -22,3 +21,4 @@ C:\Users\DELL\source\repos\Authentication\Authentication_Service\AuthenticationA
 C:\Users\DELL\source\repos\Authentication\Authentication_Service\AuthenticationAPI\Generic.Core\obj\Debug\net5.0\ref\Generic.Core.dll
 C:\Users\DELL\source\repos\Authentication\Authentication_Service\AuthenticationAPI\Generic.Core\obj\Debug\net5.0\Generic.Core.pdb
 C:\Users\DELL\source\repos\Authentication\Authentication_Service\AuthenticationAPI\Generic.Core\obj\Debug\net5.0\Generic.Core.csproj.AssemblyReference.cache
+C:\Users\DELL\source\repos\Authentication\Authentication_Service\AuthenticationAPI\Generic.Core\obj\Debug\net5.0\refint\Generic.Core.dll

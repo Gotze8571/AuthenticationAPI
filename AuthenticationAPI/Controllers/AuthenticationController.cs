@@ -49,7 +49,7 @@ namespace AuthenticationAPI.Controllers
         }
 
         // Create User profile
-        [HttpPost("CreateUser")]
+        [HttpPost("Create-User-Profile")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(MyRow))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError, Type = typeof(ErrorResponse))]
@@ -60,6 +60,8 @@ namespace AuthenticationAPI.Controllers
             try
             {
                 //var result = await repository.InsertAsync();
+                var result = "";
+                return null;
 
             }
             catch (Exception ex)
@@ -70,15 +72,15 @@ namespace AuthenticationAPI.Controllers
         }
 
         // Update User profile
-        [HttpPut]
-        public async Task<ActionResult> UpdateUser()
+        [HttpPut("Update-User-Profile")]
+        public async Task<ActionResult> UpdateUser(int userId)
         {
             return null;
         }
 
         // Delete User Profile
-        [HttpDelete]
-        public async Task<ActionResult> DeleteUser()
+        [HttpDelete("Delete-User-Profile")]
+        public async Task<ActionResult> DeleteUser(int UserId)
         {
             return null;
         }
