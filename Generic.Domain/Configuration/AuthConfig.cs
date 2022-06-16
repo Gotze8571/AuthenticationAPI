@@ -8,5 +8,9 @@ namespace Generic.Domain.Configuration
 {
     public class AuthConfig
     {
+        public string ConnectionString { get; set; }
+        //public string 
+        
+
     }
 }

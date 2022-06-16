@@ -25,7 +25,7 @@ namespace AuthenticationAPI.Controllers
         }
 
         // GET: Get User Profile, using UserID.
-        [HttpGet]
+        [HttpGet("Get-User-Profile")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<MyRow>))]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError, Type = typeof(ErrorResponse))]
@@ -33,7 +33,7 @@ namespace AuthenticationAPI.Controllers
         {
             try
             {
-                var result = await repository.FindByIdAsync(UserId);
+                var result = await repository.GetUserInfo(UserId);
                 
                 if (result != null)
                     return Ok(result);
@@ -59,8 +59,9 @@ namespace AuthenticationAPI.Controllers
                 return BadRequest(ModelState.GetErrorMessages());
             try
             {
+                
                 //var result = await repository.InsertAsync();
-                var result = "";
+                var result = await repository.InsertAsync(user);
                 return null;
 
             }
@@ -73,16 +74,107 @@ namespace AuthenticationAPI.Controllers
 
         // Update User profile
         [HttpPut("Update-User-Profile")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(MyRow))]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError, Type = typeof(ErrorResponse))]
         public async Task<ActionResult> UpdateUser(int userId)
         {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
             return null;
         }
 
         // Delete User Profile
         [HttpDelete("Delete-User-Profile")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(MyRow))]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError, Type = typeof(ErrorResponse))]
         public async Task<ActionResult> DeleteUser(int UserId)
         {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+
+            }
             return null;
+        }
+
+        // POST: POST Username and Password.
+        [HttpPost("Post-User-Details")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<MyRow>))]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError, Type = typeof(ErrorResponse))]
+        public async Task<ActionResult> LoginUser(string username, string password)
+        {
+            try
+            {
+                var result = await repository.LoginAsync(username, password);
+
+                if (result != null)
+                    return Ok(result);
+                else
+                    return NoContent();
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex.Message);
+                var error = new Error() { code = "99", message = "System malfunction" };
+                return StatusCode(500, new ErrorResponse() { error = error });
+            }
+        }
+
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<MyRow>))]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError, Type = typeof(ErrorResponse))]
+        public async Task<ActionResult> LockUser(string username, string password)
+        {
+            try
+            {
+                var result = await repository.LockoutAsync(username, password);
+
+                if (result != null)
+                    return Ok(result);
+                else
+                    return NoContent();
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex.Message);
+                var error = new Error() { code = "99", message = "System malfunction" };
+                return StatusCode(500, new ErrorResponse() { error = error });
+            }
+        }
+
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<MyRow>))]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError, Type = typeof(ErrorResponse))]
+        public async Task<ActionResult> UnlockUser(string username, string password)
+        {
+            try
+            {
+                var result = await repository.UnlockAsync(username, password);
+
+                if (result != null)
+                    return Ok(result);
+                else
+                    return NoContent();
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex.Message);
+                var error = new Error() { code = "99", message = "System malfunction" };
+                return StatusCode(500, new ErrorResponse() { error = error });
+            }
         }
 
     }

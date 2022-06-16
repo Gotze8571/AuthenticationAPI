@@ -7,7 +7,11 @@ using System.Threading.Tasks;
 
 namespace Generic.Domain.Repositories.Interface
 {
-    public interface IAuthRepository : IGenericRepository<User_Details>
+    public interface IAuthRepository
     {
+        Task<List<UserProfile>> GetUserInfo(string userId);
+        Task<UserProfile> SingleUserInfo(string userId);
+        Task<UserProfile> DeleteUserInfo(string userId);
+        Task<UserProfile> GetAllUserInfo();
     }
 }

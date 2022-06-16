@@ -1,6 +1,9 @@
 using Generic.Domain.Configuration;
+using Generic.Domain.Repositories.Concrete;
+using Generic.Domain.Repositories.Interface;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -42,6 +45,29 @@ namespace AuthenticationAPI
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "AuthenticationAPI", Version = "v1" });
             });
+                // Register Code First Migrations Dependencies
+           // services.AddDbContext<ApplicationDbContext>(options =>
+           //options.UseSqlServer(
+           //Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("SAP_BusinessLogic")));
+
+            // Register Dapper Dependencies
+            services.Configure<AuthConfig>(Configuration.GetSection("AppSettings"));
+           // services.AddTransient<IDbConnection>(prov => new SqlConnection(prov.GetService<IConfiguration>().GetConnectionString("DefaultConnection")));
+
+            // Register Repositories
+           // services.AddScoped<IAuthRepository, AuthRepository>();
+            //services.AddScoped<IGenericRepository, GenericRepository>();
+
+            // Register Services
+            //services.AddTransient<IAccountSetupService, AccountSetupService>();
+            
+
+
+            // Register Helpers
+            //services.AddScoped<IUtil, Util>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

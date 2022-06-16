@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "0OHEbqdAQKGJwxQr7PypXbP3NS4zVmTJV7sxlJ5xELvZ38aFGKNORxOLDKX9A6pTqAGltqV0M2CnaP4MqRpYAA==",
+  "dgSpecHash": "kNc7Sl5XLHfx8BfGejLHMz12bxDBPegB9txQzE4nyoUWRDEpse56UDmxchHyz8INyfmXowLv1hZR3uXFsoievQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\DELL\\source\\repos\\Authentication\\Authentication_Service\\AuthenticationAPI\\Generic.Domain\\Generic.Domain.csproj",
   "expectedPackageFiles": [

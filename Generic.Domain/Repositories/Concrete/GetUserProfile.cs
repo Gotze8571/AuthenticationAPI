@@ -16,4 +16,4 @@ namespace Generic.Domain.Repositories.Concrete
              return null;
         }
     }
-}
+}  
