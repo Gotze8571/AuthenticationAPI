@@ -99,7 +99,7 @@ namespace Generic.Domain.Repositories.Concrete
 
         public async Task<UserProfile> SingleUserInfo(string userId)
         {
-            var result =  await _repository.
+            //var result =  await _repository.
             throw new NotImplementedException();
         }
 
