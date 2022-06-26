@@ -25,7 +25,7 @@ namespace AuthenticationAPI.Controllers
         }
 
         // GET: Get User Profile, using UserID.
-        [HttpGet("Get-User-Profile")]
+        [HttpGet("Get-User")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<MyRow>))]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError, Type = typeof(ErrorResponse))]
@@ -33,7 +33,7 @@ namespace AuthenticationAPI.Controllers
         {
             try
             {
-                var result = await repository.GetUserInfo(UserId);
+                var result = await repository.SingleUserInfo(UserId);
                 
                 if (result != null)
                     return Ok(result);
@@ -49,20 +49,18 @@ namespace AuthenticationAPI.Controllers
         }
 
         // Create User profile
-        [HttpPost("Create-User-Profile")]
+        [HttpPost("Create-User")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(MyRow))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError, Type = typeof(ErrorResponse))]
-        public async Task<ActionResult> CreateUser(User_Details user)
+        public async Task<ActionResult> CreateUser(UserProfile user)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState.GetErrorMessages());
             try
             {
-                
-                //var result = await repository.InsertAsync();
-                var result = await repository.InsertAsync(user);
-                return null;
+                var result = await repository.CreateUser(user);
+                return Ok(user);
 
             }
             catch (Exception ex)
@@ -73,30 +71,37 @@ namespace AuthenticationAPI.Controllers
         }
 
         // Update User profile
-        [HttpPut("Update-User-Profile")]
+        [HttpPut("Update-User")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(MyRow))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError, Type = typeof(ErrorResponse))]
-        public async Task<ActionResult> UpdateUser(int userId)
+        public async Task<ActionResult> UpdateUser(UserProfile user)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState.GetErrorMessages());
             try
             {
-
+                var result = await repository.UpdateUserInfo(user);
+                if (result != null)
+                    return Ok(result);
+                else
+                    return NoContent();
             }
             catch (Exception ex)
             {
-
-                throw ex;
+                logger.LogError(ex.Message);
+                var error = new Error() { code = "99", message = "System Malfunction" };
+                return StatusCode(500, new ErrorResponse() { error = error });
             }
             return null;
         }
 
         // Delete User Profile
-        [HttpDelete("Delete-User-Profile")]
+        [HttpDelete("Delete-User")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(MyRow))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError, Type = typeof(ErrorResponse))]
-        public async Task<ActionResult> DeleteUser(int UserId)
+        public async Task<ActionResult> DeleteUser(string UserId)
         {
             try
             {
@@ -110,7 +115,7 @@ namespace AuthenticationAPI.Controllers
         }
 
         // POST: POST Username and Password.
-        [HttpPost("Post-User-Details")]
+        [HttpPost("Login-User")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<MyRow>))]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError, Type = typeof(ErrorResponse))]
@@ -118,7 +123,7 @@ namespace AuthenticationAPI.Controllers
         {
             try
             {
-                var result = await repository.LoginAsync(username, password);
+                var result = await repository.LoginUser(username, password);
 
                 if (result != null)
                     return Ok(result);
@@ -133,14 +138,15 @@ namespace AuthenticationAPI.Controllers
             }
         }
 
+        [HttpPost("Lockout-User")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<MyRow>))]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError, Type = typeof(ErrorResponse))]
-        public async Task<ActionResult> LockUser(string username, string password)
+        public async Task<ActionResult> LockoutUser(string username, string password)
         {
             try
             {
-                var result = await repository.LockoutAsync(username, password);
+                var result = await repository.LockoutUser(username, password);
 
                 if (result != null)
                     return Ok(result);
@@ -154,6 +160,7 @@ namespace AuthenticationAPI.Controllers
                 return StatusCode(500, new ErrorResponse() { error = error });
             }
         }
+        [HttpPost("Unlock-User")]
 
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<MyRow>))]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
@@ -162,7 +169,7 @@ namespace AuthenticationAPI.Controllers
         {
             try
             {
-                var result = await repository.UnlockAsync(username, password);
+                var result = await repository.UnlockUser(username, password);
 
                 if (result != null)
                     return Ok(result);

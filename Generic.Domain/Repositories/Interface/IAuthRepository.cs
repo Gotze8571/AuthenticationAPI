@@ -9,9 +9,13 @@ namespace Generic.Domain.Repositories.Interface
 {
     public interface IAuthRepository
     {
-        Task<List<UserProfile>> GetUserInfo(string userId);
+        Task<List<UserProfile>> GetAllUserInfo(string userId);
         Task<UserProfile> SingleUserInfo(string userId);
-        Task<UserProfile> DeleteUserInfo(string userId);
-        Task<UserProfile> GetAllUserInfo();
+        Task<UserProfile> LoginUser(string username, string password);
+        Task<bool> CreateUser(UserProfile user);
+        Task<bool> DeleteUserInfo(UserProfile user);
+        Task<UserProfile> LockoutUser(string username, string password);
+        Task<UserProfile> UnlockUser(string username, string password);
+        Task<UserProfile> UpdateUserInfo(UserProfile user);
     }
 }

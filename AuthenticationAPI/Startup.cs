@@ -45,17 +45,17 @@ namespace AuthenticationAPI
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "AuthenticationAPI", Version = "v1" });
             });
-                // Register Code First Migrations Dependencies
-           // services.AddDbContext<ApplicationDbContext>(options =>
-           //options.UseSqlServer(
-           //Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("SAP_BusinessLogic")));
+            // Register Code First Migrations Dependencies
+            // services.AddDbContext<ApplicationDbContext>(options =>
+            //options.UseSqlServer(
+            //Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("SAP_BusinessLogic")));
 
             // Register Dapper Dependencies
             services.Configure<AuthConfig>(Configuration.GetSection("AppSettings"));
            // services.AddTransient<IDbConnection>(prov => new SqlConnection(prov.GetService<IConfiguration>().GetConnectionString("DefaultConnection")));
 
             // Register Repositories
-           // services.AddScoped<IAuthRepository, AuthRepository>();
+            services.AddScoped<IAuthRepository, AuthRepository>();
             //services.AddScoped<IGenericRepository, GenericRepository>();
 
             // Register Services
@@ -77,10 +77,11 @@ namespace AuthenticationAPI
             {
                 app.UseDeveloperExceptionPage();
                 app.UseHttpsRedirection();
+                app.UseSwagger();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("../swagger/v1/swagger.json", "AuthenticationAPI v1"));
             }
 
-            app.UseSwagger();
-            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "AuthenticationAPI v1"));
+
 
             app.UseRouting();
 
