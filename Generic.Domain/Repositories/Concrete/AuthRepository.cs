@@ -15,6 +15,7 @@ namespace Generic.Domain.Repositories.Concrete
     {
         private DapperRepository<UserProfile> _repository;
 
+
         
 
         public Task<bool> CreateUser(UserProfile user)
@@ -22,15 +23,15 @@ namespace Generic.Domain.Repositories.Concrete
             throw new NotImplementedException();
         }
 
-        public Task<bool> DeleteAsync(Expression<Func<User_Details, bool>> predicate, IDbTransaction transaction = null)
-        {
-            throw new NotImplementedException();
-        }
+        //public Task<bool> DeleteAsync(Expression<Func<User_Details, bool>> predicate, IDbTransaction transaction = null)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        public Task<UserProfile> DeleteUserInfo(string userId)
-        {
-            throw new NotImplementedException();
-        }
+        //public Task<UserProfile> DeleteUserInfo(string userId)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         public Task<UserProfile> DeleteUserInfo(UserProfile user)
         {
@@ -127,10 +128,5 @@ namespace Generic.Domain.Repositories.Concrete
         {
             throw new NotImplementedException();
         }
-        //public AuthRepository(DapperRepository<User_Details> repository)
-        //{
-        //    _repository = repository;
-        //}
-
     }
 }
