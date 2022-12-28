@@ -14,25 +14,31 @@ namespace Generic.Domain.Repositories.Concrete
     public class AuthRepository : IAuthRepository
     {
         private DapperRepository<UserProfile> _repository;
-
-
         
 
-        public Task<bool> CreateUser(UserProfile user)
+
+        public Task<User_Details> CreateUser(User_Details user)
         {
-            throw new NotImplementedException();
+            try
+            {
+                if ((user.UserID == null) || (user.FirstName == null)
+                    || (user.LastName == null) || (user.UserPix == null))
+                {
+
+                }
+                else
+                {
+                    return null;
+                }
+                return null;
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+            
         }
-
-        //public Task<bool> DeleteAsync(Expression<Func<User_Details, bool>> predicate, IDbTransaction transaction = null)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-        //public Task<UserProfile> DeleteUserInfo(string userId)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
         public Task<UserProfile> DeleteUserInfo(UserProfile user)
         {
             throw new NotImplementedException();
@@ -40,6 +46,7 @@ namespace Generic.Domain.Repositories.Concrete
 
         public Task<IEnumerable<User_Details>> FindAllAsync()
         {
+            var userDetails = "";
             throw new NotImplementedException();
         }
 
@@ -58,17 +65,17 @@ namespace Generic.Domain.Repositories.Concrete
             throw new NotImplementedException();
         }
 
-        public Task<UserProfile> GetAllUserInfo()
+        public Task<User_Details> GetAllUserInfo()
         {
             throw new NotImplementedException();
         }
 
-        public Task<List<UserProfile>> GetAllUserInfo(string userId)
+        public Task<List<User_Details>> GetAllUserInfo(string userId)
         {
             throw new NotImplementedException();
         }
 
-        public Task<List<UserProfile>> GetUserInfo(string userId)
+        public Task<List<User_Details>> GetUserInfo(string userId)
         {
             throw new NotImplementedException();
         }
@@ -83,7 +90,7 @@ namespace Generic.Domain.Repositories.Concrete
             throw new NotImplementedException();
         }
 
-        public Task<UserProfile> LockoutUser(string username, string password)
+        public Task<User_Details> LockoutUser(string username, string password)
         {
             throw new NotImplementedException();
         }
@@ -93,12 +100,12 @@ namespace Generic.Domain.Repositories.Concrete
             throw new NotImplementedException();
         }
 
-        public Task<UserProfile> LoginUser(string username, string password)
+        public Task<User_Details> LoginUser(string username, string password)
         {
             throw new NotImplementedException();
         }
 
-        public async Task<UserProfile> SingleUserInfo(string userId)
+        public async Task<User_Details> SingleUserInfo(string userId)
         {
             //var result =  await _repository.
             throw new NotImplementedException();
@@ -109,7 +116,7 @@ namespace Generic.Domain.Repositories.Concrete
             throw new NotImplementedException();
         }
 
-        public Task<UserProfile> UnlockUser(string username, string password)
+        public Task<User_Details> UnlockUser(string username, string password)
         {
             throw new NotImplementedException();
         }
@@ -119,14 +126,29 @@ namespace Generic.Domain.Repositories.Concrete
             throw new NotImplementedException();
         }
 
-        public Task<UserProfile> UpdateUserInfo(UserProfile user)
+        public Task<User_Details> UpdateUserInfo(User_Details user)
+        {
+            var changeUserProfile = true;
+            if (changeUserProfile == true)
+            {
+               // conn = 
+            }
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> DeleteUserInfo(User_Details user)
         {
             throw new NotImplementedException();
         }
 
-        Task<bool> IAuthRepository.DeleteUserInfo(UserProfile user)
-        {
-            throw new NotImplementedException();
-        }
+        //Task<bool> IAuthRepository.DeleteUserInfo(User_Details user)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        //Task<User_Details> IAuthRepository.UnlockUser(string username, string password)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }
